@@ -16,6 +16,8 @@ const Counter = ({ coin }) => {
   const reset = () => {
     setTeam1(0);
     setTeam2(0);
+    setTeam1Serve(false);
+    setTeam2Serve(false);
   };
 
   //------------------------------------------------------ Plus & Minus -----------------------------------------------------------------
