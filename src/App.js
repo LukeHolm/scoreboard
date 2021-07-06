@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { useState } from "react";
+
+import Counter from "./components/Counter";
+import Teamname from "./components/Teamname";
 
 function App() {
+  const [show, setShow] = useState(false);
+  let [random, setRandom] = useState();
+  let [clicked, setClicked] = useState(false);
+  
+
+  const coinflipper = () => {
+    if (clicked === false) {
+      setClicked(true);
+      setRandom(() => Math.floor(Math.random() * 2));
+    } else if (clicked === true) {
+      setRandom(3);
+      setClicked(false);
+    }
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="col center">
+      <div>
+        <button className="setting-button" onClick={() => setShow(true)}>Set team name</button>
+        <button className="coin-button" onClick={coinflipper}>CoinFlip</button>
+        <Teamname onClose={() => setShow(false)} show={show}></Teamname>
+      </div>
+      <Counter coin={random} />
     </div>
   );
 }

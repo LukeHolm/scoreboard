@@ -1,38 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: lightcoral;
+  font-family: Orbitron;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.score {
+  font-size: 15vw;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 15px 15px 15px 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center {
+  text-align: center;
+}
+
+.teamname {
+  margin-top: 2%;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.button-box {
   display: flex;
-  flex-direction: column;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+
+.reset-box {
+  margin-top: 4%;
+}
+
+.button {
+  background-color: lightblue;
+  font-size: 5vw;
+  align-content: center;
+  border-radius: 15px;
+  border-style: none;
+  width: 25%;
+}
+
+.reset-button {
+  background-color: lightblue;
+  font-size: 2vw;
+  align-content: center;
+  border-radius: 15px;
+  border-style: none;
+}
+
+.button:focus,
+.reset-button:focus {
+  outline: none;
+}
+
+.fa-angle-right,
+.fa-angle-left,
+.fa-caret-left,
+.fa-caret-right {
+  display: flex;
+  justify-content: center;
+  margin-top: 40%;
+  font-size: 10vw;
+}
+/*------------------------------------------------------------- Modal General -------------------------------------------------------*/
+
+.modal-background {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  width: 25%;
+  height: 25%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-body {
+  font-size: 1vw;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
 }
