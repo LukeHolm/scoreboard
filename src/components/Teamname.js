@@ -8,8 +8,9 @@ const Teamname = (props) => {
     return (
       <div>
         <div className="row">
-          <div className="col-sm-6 teamname">{team1}</div>
-          <div className="col-sm-6 teamname">{team2}</div>
+          <div className="col-sm-4 teamname">{team1}</div>
+          <div className="col-sm-4 teamname">Sets won</div>
+          <div className="col-sm-4 teamname">{team2}</div>
         </div>
       </div>
     );
