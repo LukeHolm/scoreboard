@@ -1,8 +1,10 @@
 import "./App.css";
+import "./Radiobutton.css";
 
 import { useState } from "react";
 
 import Indoor from "./components/Indoor";
+import Beach from "./components/Beach";
 import Teamname from "./components/Teamname";
 
 function App() {

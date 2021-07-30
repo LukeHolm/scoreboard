@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Indoor = ({ coin }) => {
+const Beach = ({ coin }) => {
 
 
 
@@ -11,6 +11,9 @@ const Indoor = ({ coin }) => {
   const [setScore, setSetScore] = useState([]); //Array with set scores, displayed at bottom of page
   const [team1wins, setTeam1Wins] = useState(0);
   const [team2wins, setTeam2Wins] = useState(0);
+
+  const sideSwitch = team1 + team2;
+  console.log(sideSwitch);
 
   //------------------------------------------------------ Reset score ------------------------------------------------------------------
 
@@ -32,13 +35,13 @@ const Indoor = ({ coin }) => {
   //------------------------------------------------------ Plus & Minus -----------------------------------------------------------------
 
   const plus1 = () => {
-    if ((team1 === 24 && team2 < 24) || (team1 > 24 && team1 === team2 + 1)) {
+    if ((team1 === 20 && team2 < 20) || (team1 > 20 && team1 === team2 + 1)) {
       setTeam1(team1 + 1);
       if(window.confirm("Team 1 wins")) {{
       setSetScore(setScore.concat(team1 + 1,team2));
       setTeam1Wins(team1wins+1);
       }}
-    } else if ((team1 === 25 && team2 < 24) || (team1 > 25 && team1 === team2 + 2)) {
+    } else if ((team1 === 21 && team2 < 20) || (team1 > 21 && team1 === team2 + 2)) {
       setTeam1(team1 + 0)
     } else {
       setTeam1(team1 + 1);
@@ -54,13 +57,13 @@ const Indoor = ({ coin }) => {
   };
 
   const plus2 = () => {
-    if ((team2 === 24 && team1 < 24) || (team2 > 24 && team2 === team1 + 1)) {
+    if ((team2 === 20 && team1 < 20) || (team2 > 20 && team2 === team1 + 1)) {
       setTeam2(team2 + 1);
       if(window.confirm("Team 2 wins")) {{
         setSetScore(setScore.concat(team1,team2 + 1));
         setTeam2Wins(team2wins+1);
       }}
-    } else if ((team2 === 25 && team1 < 24) || (team2 > 25 && team2 === team1 + 2)) {
+    } else if ((team2 === 21 && team1 < 20) || (team2 > 21 && team2 === team1 + 2)) {
       setTeam2(team2 + 0)
     } else {
       setTeam2(team2 + 1);
@@ -97,7 +100,20 @@ const Indoor = ({ coin }) => {
   serve2 = null;
 }
 
-  //------------------------------------------------------ Return -----------------------------------------------------------------
+//------------------------------------------------------ Side switch ------------------------------------------------------------
+
+if (sideSwitch === 7 || 
+  sideSwitch === 14 || 
+  sideSwitch === 21 || 
+  sideSwitch === 28 || 
+  sideSwitch === 35 ||
+  sideSwitch === 42 ||
+  sideSwitch === 49 ||
+  sideSwitch === 56) {
+    alert("Side switch!");
+  }
+
+//------------------------------------------------------ Return -----------------------------------------------------------------
 
   return (
     <div>
@@ -194,4 +210,4 @@ const Indoor = ({ coin }) => {
   );
 };
 
-export default Indoor;
+export default Beach;

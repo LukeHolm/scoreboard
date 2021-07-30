@@ -1,0 +1,54 @@
+/* Customize the label (the container) */
+.container {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    height: 2vw;
+    width: 2vw;
+    background-color: grey;
+    border-radius: 50%;
+  }
+  
+  
+  /* When the radio button is checked, add a black background */
+  .container input:checked ~ .checkmark {
+    background-color: black;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: relative;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 0.7vw;
+    left: 0.7vw;
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+    background: white;
+  }

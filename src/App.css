@@ -9,6 +9,17 @@ body {
   font-family: Orbitron;
 }
 
+.big{
+  font-size: 5vw;
+  color:royalblue;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
 .score {
   font-size: 14vw;
   text-align: center;
@@ -52,7 +63,13 @@ body {
 }
 
 .sets-won {
-  font-size: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 6vw;
+  text-align: center;
+  color: black;
+  border-radius: 0.8vw;
 }
 
 .center {
