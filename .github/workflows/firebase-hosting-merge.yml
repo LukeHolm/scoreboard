@@ -23,4 +23,4 @@ jobs:
           channelId: live
           projectId: volleyball-dd836
         env:
-        FIREBASE_CLI_PREVIEWS: hostingchannels
+          FIREBASE_CLI_PREVIEWS: hostingchannels
